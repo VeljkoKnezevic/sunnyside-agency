@@ -1,0 +1,70 @@
+@use "../utils/" as u;
+
+.header {
+  padding-inline: u.rem(24);
+  padding-block-start: u.rem(32);
+
+  background-image: url(../images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: u.rem(538);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include u.breakpoint(large) {
+    padding-inline-start: u.rem(40);
+    padding-inline-end: u.rem(48);
+    padding-block-start: u.rem(34);
+
+    background-image: url(../images/desktop/image-header.jpg);
+
+    min-height: u.rem(800);
+  }
+
+  &__hamburger {
+    @include u.breakpoint(large) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    @include u.breakpoint(large) {
+      margin-block-start: u.rem(12);
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include u.breakpoint(large) {
+      display: flex;
+      gap: u.rem(47);
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__item {
+      font-size: u.rem(18);
+      line-height: u.rem(25);
+      letter-spacing: -0.128571px;
+      color: var(--white);
+
+      &__button {
+        font-family: "Fraunces";
+        font-weight: 700;
+        font-size: u.rem(15);
+        line-height: u.rem(25);
+        padding: u.rem(16) u.rem(30) u.rem(15) u.rem(32);
+        letter-spacing: -0.107143px;
+        text-transform: uppercase;
+        border: none;
+        color: var(--white);
+        background: rgb(255, 255, 255, 0.25);
+        border-radius: 28px;
+      }
+    }
+  }
+}

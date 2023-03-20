@@ -1,0 +1,84 @@
+@use "../utils/" as u;
+
+.cards {
+  display: grid;
+  width: 100vw;
+
+  .card {
+    text-align: center;
+
+    &__image {
+      width: 100%;
+    }
+
+    &__content {
+      padding: u.rem(64) u.rem(24);
+    }
+
+    &__heading {
+      color: var(--blue);
+    }
+
+    &__para {
+      margin-block-start: u.rem(24);
+      font-size: u.rem(18);
+      line-height: u.rem(30);
+      letter-spacing: -0.128571px;
+      color: var(--grey);
+    }
+
+    &__button {
+      font-family: u.$font-fraunces;
+      margin-block-start: u.rem(32);
+      font-size: u.rem(15);
+      line-height: u.rem(25);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: none;
+      border: none;
+      position: relative;
+
+      &--transform::after {
+        background-color: rgba(250, 212, 0, 0.25);
+      }
+
+      &--stand::after {
+        background-color: rgba(254, 119, 102, 0.25);
+      }
+
+      &::after {
+        content: "";
+        height: 10px;
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 3%;
+        z-index: -1;
+        border-radius: u.rem(28);
+      }
+    }
+
+    &__bottom {
+      min-height: u.rem(600);
+
+      &__content {
+        margin-inline: u.rem(24);
+        margin-block-start: u.rem(400);
+      }
+    }
+  }
+
+  .graphic {
+    background-image: url(../images/mobile/image-graphic-design.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .photography {
+    background-image: url(../images/mobile/image-photography.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

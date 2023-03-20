@@ -3,84 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!-- Barlow font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <img class="header__logo" src="./images/logo.svg" alt="Logo" />
+      <img
+        class="header__hamburger"
+        src="./images/icon-hamburger.svg"
+        alt="Menu"
+      />
       <nav class="header__nav">
-        <ul class="nav__items">
-          <li class="nav__item">About</li>
-          <li class="nav__item">Services</li>
-          <li class="nav__item">Projects</li>
-          <li class="nav__item">Contact</li>
-        </ul>
+        <div class="nav__item">About</div>
+        <div class="nav__item">Services</div>
+        <div class="nav__item">Projects</div>
+        <div class="nav__item">
+          <button class="nav__item__button">Contact</button>
+        </div>
       </nav>
     </header>
 
     <main>
       <div class="hero">
         <h1 class="hero__heading">We are creatives</h1>
+        <img
+          class="hero__image"
+          src="./images/icon-arrow-down.svg"
+          alt="Arrow pointing down"
+        />
       </div>
       <div class="cards">
         <div class="card transform">
           <img
-            class="transform__image"
+            class="card__image"
             src="./images/mobile/image-transform.jpg"
             alt="egg on a yellow background"
           />
-          <div class="transform__content">
+
+          <div class="card__content">
             <h2 class="card__heading">Transform your brand</h2>
             <p class="card__para">
               We are a full-service creative agency specializing in helping
               brands grow fast. Engage your clients through compelling visuals
               that do most of the marketing for you.
             </p>
-            <button class="card__button">Learn more</button>
+            <button class="card__button card__button--transform">
+              Learn more
+            </button>
           </div>
         </div>
         <div class="card stand">
           <img
-            class="stand__image"
+            class="card__image"
             src="./images/mobile/image-stand-out.jpg"
             alt="Pink glass"
           />
-          <div class="stand__content">
+          <div class="card__content">
             <h2 class="card__heading">Stand out to the right audience</h2>
             <p class="card__para">
               Using a collaborative formula of designers, researchers,
               photographers, videographers, and copywriters, we’ll build and
               extend your brand in digital places.
             </p>
-            <button class="card__button">Learn more</button>
+            <button class="card__button card__button--stand">Learn more</button>
           </div>
         </div>
         <div class="card card__bottom graphic">
-          <h3 class="card__bottom__heading">Graphic design</h3>
-          <p class="card__bottom__para">
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients’
-            attention.
-          </p>
+          <div class="card__bottom__content">
+            <h3 class="card__bottom__heading">Graphic design</h3>
+            <p class="card__bottom__para">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
         </div>
         <div class="card card__bottom photography">
-          <h3 class="card__bottom__heading">Photography</h3>
-          <p class="card__bottom__para">
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
+          <div class="card__bottom__content">
+            <h3 class="card__bottom__heading">Photography</h3>
+            <p class="card__bottom__para">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
         </div>
       </div>
       <section class="testimonials">
-        <h3 class="testimonials__heading">Client testimonials</h3>
+        <h4 class="testimonials__heading">Client testimonials</h4>
         <div class="testimonials__container">
           <div class="testimonials__wrapper">
             <img

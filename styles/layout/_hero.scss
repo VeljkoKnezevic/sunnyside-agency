@@ -1,0 +1,28 @@
+@use "../utils/" as u;
+
+.hero {
+  position: absolute;
+  z-index: 2;
+  top: u.rem(144);
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  @include u.breakpoint(large) {
+    top: u.rem(195);
+  }
+
+  &__heading {
+    color: var(--white);
+    text-align: center;
+  }
+
+  &__image {
+    display: block;
+    margin-inline: auto;
+    margin-block-start: u.rem(52);
+
+    @include u.breakpoint(large) {
+      margin-block-start: u.rem(96.5);
+    }
+  }
+}
