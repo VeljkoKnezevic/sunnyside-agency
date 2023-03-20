@@ -1,1 +1,46 @@
 @use "../utils/" as u;
+
+.footer {
+  background-color: var(--green-background);
+  padding: u.rem(64) u.rem(39) u.rem(80);
+  text-align: center;
+
+  @include u.breakpoint(xlarge) {
+    padding: u.rem(72) u.rem(570);
+  }
+
+  &__logo {
+    width: u.rem(170);
+    height: u.rem(33);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: u.rem(40);
+
+    @include u.breakpoint(xlarge) {
+      max-width: u.rem(300);
+      margin-inline: auto;
+    }
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.128571px;
+    color: var(--light-green);
+  }
+
+  &__socials {
+    width: u.rem(164);
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    margin-block-start: u.rem(88);
+    @include u.breakpoint(xlarge) {
+      max-width: u.rem(300);
+    }
+  }
+}

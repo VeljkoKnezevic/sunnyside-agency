@@ -31,7 +31,7 @@ h3 {
 
 h4 {
   font-family: u.$font-fraunces;
-  font-size: clamp(u.rem(16), u.rem(16) + 1vw, u.rem(20));
+  font-size: clamp(u.rem(16), u.rem(10) + 1vw, u.rem(20));
   line-height: clamp(u.rem(20), u.rem(16) + 1vw, u.rem(25));
   letter-spacing: 4px;
 }

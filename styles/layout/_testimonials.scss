@@ -1,1 +1,78 @@
 @use "../utils/" as u;
+
+.testimonials {
+  padding: u.rem(64) u.rem(24) u.rem(86);
+
+  @include u.breakpoint(xlarge) {
+    padding: u.rem(160) u.rem(165);
+  }
+
+  &__container {
+    display: flex;
+    gap: u.rem(64);
+    flex-direction: column;
+    margin-block-start: u.rem(64);
+
+    @include u.breakpoint(xlarge) {
+      flex-direction: row;
+      gap: u.rem(30);
+      margin-block-start: u.rem(81);
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--silver);
+
+    @include u.breakpoint(xlarge) {
+      letter-spacing: 5px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__image {
+    width: u.rem(72);
+    height: u.rem(72);
+    border-radius: 50%;
+  }
+
+  &__para {
+    font-size: u.rem(18);
+    line-height: u.rem(32);
+    letter-spacing: -0.128571px;
+    color: var(--light-grey);
+    margin-block-start: u.rem(32);
+
+    @include u.breakpoint(xlarge) {
+      margin-block-start: u.rem(58);
+    }
+  }
+
+  &__name {
+    font-family: "Fraunces 9pt Soft";
+    font-size: u.rem(18);
+    line-height: u.rem(22);
+    letter-spacing: -0.128571px;
+    color: var(--blue);
+    margin-block-start: u.rem(32);
+
+    @include u.breakpoint(xlarge) {
+      margin-block-start: u.rem(69);
+    }
+  }
+
+  &__title {
+    font-size: u.rem(14);
+    line-height: u.rem(25);
+    letter-spacing: -0.1px;
+    color: var(--silver);
+    margin-block-start: u.rem(9);
+  }
+}

@@ -47,7 +47,7 @@ h3 {
 
 h4 {
   font-family: "Fraunces", serif;
-  font-size: clamp(1rem, 1rem + 1vw, 1.25rem);
+  font-size: clamp(1rem, 0.625rem + 1vw, 1.25rem);
   line-height: clamp(1.25rem, 1rem + 1vw, 1.5625rem);
   letter-spacing: 4px;
 }
@@ -76,6 +76,7 @@ a:active {
   --silver: #a7aaad;
   --light-grey: #5b636d;
   --light-green: #458d7e;
+  --green-background: #90d4c6;
 }
 
 .header {
@@ -320,6 +321,81 @@ a:active {
   margin-block-start: 1.6875rem;
 }
 
+.testimonials {
+  padding: 4rem 1.5rem 5.375rem;
+}
+@media (min-width: 90em) {
+  .testimonials {
+    padding: 10rem 10.3125rem;
+  }
+}
+.testimonials__container {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+  margin-block-start: 4rem;
+}
+@media (min-width: 90em) {
+  .testimonials__container {
+    flex-direction: row;
+    gap: 1.875rem;
+    margin-block-start: 5.0625rem;
+  }
+}
+.testimonials__heading {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+@media (min-width: 90em) {
+  .testimonials__heading {
+    letter-spacing: 5px;
+  }
+}
+.testimonials__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.testimonials__image {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+}
+.testimonials__para {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: -0.128571px;
+  color: var(--light-grey);
+  margin-block-start: 2rem;
+}
+@media (min-width: 90em) {
+  .testimonials__para {
+    margin-block-start: 3.625rem;
+  }
+}
+.testimonials__name {
+  font-family: "Fraunces 9pt Soft";
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.128571px;
+  color: var(--blue);
+  margin-block-start: 2rem;
+}
+@media (min-width: 90em) {
+  .testimonials__name {
+    margin-block-start: 4.3125rem;
+  }
+}
+.testimonials__title {
+  font-size: 0.875rem;
+  line-height: 1.5625rem;
+  letter-spacing: -0.1px;
+  color: var(--silver);
+  margin-block-start: 0.5625rem;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -379,6 +455,51 @@ a:active {
 @media (min-width: 90em) {
   .gallery .sugar {
     background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+  }
+}
+
+.footer {
+  background-color: var(--green-background);
+  padding: 4rem 2.4375rem 5rem;
+  text-align: center;
+}
+@media (min-width: 90em) {
+  .footer {
+    padding: 4.5rem 35.625rem;
+  }
+}
+.footer__logo {
+  width: 10.625rem;
+  height: 2.0625rem;
+}
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 2.5rem;
+}
+@media (min-width: 90em) {
+  .footer__items {
+    max-width: 18.75rem;
+    margin-inline: auto;
+  }
+}
+.footer__item {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.128571px;
+  color: var(--light-green);
+}
+.footer__socials {
+  width: 10.25rem;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  margin-block-start: 5.5rem;
+}
+@media (min-width: 90em) {
+  .footer__socials {
+    max-width: 18.75rem;
   }
 }
 
