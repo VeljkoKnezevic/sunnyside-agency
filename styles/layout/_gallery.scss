@@ -1,0 +1,59 @@
+@use "../utils/" as u;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  @include u.breakpoint(xlarge) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+  }
+
+  &__image {
+    width: u.rem(188);
+    height: u.rem(188);
+
+    @include u.breakpoint(xlarge) {
+      width: u.rem(360);
+      height: u.rem(447);
+    }
+  }
+
+  .milk {
+    background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include u.breakpoint(xlarge) {
+      background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+    }
+  }
+
+  .orange {
+    background-image: url(../images/mobile/image-gallery-orange.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include u.breakpoint(xlarge) {
+      background-image: url(../images/desktop/image-gallery-orange.jpg);
+    }
+  }
+  .cone {
+    background-image: url(../images/mobile/image-gallery-cone.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include u.breakpoint(xlarge) {
+      background-image: url(../images/desktop/image-gallery-cone.jpg);
+    }
+  }
+  .sugar {
+    background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include u.breakpoint(xlarge) {
+      background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+    }
+  }
+}

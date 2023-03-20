@@ -58,11 +58,17 @@
       </div>
       <div class="cards">
         <div class="card transform">
-          <img
-            class="card__image"
-            src="./images/mobile/image-transform.jpg"
-            alt="egg on a yellow background"
-          />
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="./images/desktop/image-transform.jpg"
+            />
+            <img
+              class="card__image"
+              src="./images/mobile/image-transform.jpg"
+              alt="egg on a yellow background"
+            />
+          </picture>
 
           <div class="card__content">
             <h2 class="card__heading">Transform your brand</h2>
@@ -77,11 +83,17 @@
           </div>
         </div>
         <div class="card stand">
-          <img
-            class="card__image"
-            src="./images/mobile/image-stand-out.jpg"
-            alt="Pink glass"
-          />
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="./images/desktop/image-stand-out.jpg"
+            />
+            <img
+              class="card__image"
+              src="./images/mobile/image-stand-out.jpg"
+              alt="Pink glass"
+            />
+          </picture>
           <div class="card__content">
             <h2 class="card__heading">Stand out to the right audience</h2>
             <p class="card__para">
@@ -94,8 +106,8 @@
         </div>
         <div class="card card__bottom graphic">
           <div class="card__bottom__content">
-            <h3 class="card__bottom__heading">Graphic design</h3>
-            <p class="card__bottom__para">
+            <h3 class="graphic__heading">Graphic design</h3>
+            <p class="graphic__para">
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
               attention.
@@ -104,8 +116,8 @@
         </div>
         <div class="card card__bottom photography">
           <div class="card__bottom__content">
-            <h3 class="card__bottom__heading">Photography</h3>
-            <p class="card__bottom__para">
+            <h3 class="photography__heading">Photography</h3>
+            <p class="photography__para">
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
             </p>
@@ -156,6 +168,13 @@
           </div>
         </div>
       </section>
+
+      <div class="gallery">
+        <div class="gallery__image milk"></div>
+        <div class="gallery__image orange"></div>
+        <div class="gallery__image cone"></div>
+        <div class="gallery__image sugar"></div>
+      </div>
     </main>
 
     <footer class="footer">
