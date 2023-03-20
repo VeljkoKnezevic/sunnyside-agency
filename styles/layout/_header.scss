@@ -9,7 +9,7 @@
   background-size: 100% 100%;
   min-height: u.rem(538);
   position: relative;
-  z-index: 1;
+  z-index: 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -25,6 +25,8 @@
   }
 
   &__hamburger {
+    background: none;
+    border: none;
     @include u.breakpoint(large) {
       display: none;
     }
@@ -39,6 +41,33 @@
   &__nav {
     display: none;
 
+    &--active {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fffcf8;
+      z-index: 2;
+      padding: u.rem(39) u.rem(95);
+      gap: u.rem(32);
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-top: 12px solid transparent;
+        border-right: 12px solid white;
+        border-bottom: 12px solid white;
+        top: -23px;
+        right: 0;
+      }
+    }
+
     @include u.breakpoint(large) {
       display: flex;
       gap: u.rem(47);
@@ -52,6 +81,9 @@
       letter-spacing: -0.128571px;
       color: var(--white);
 
+      &--active {
+        color: #808397;
+      }
       &__button {
         font-family: "Fraunces";
         font-weight: 700;
@@ -60,10 +92,20 @@
         padding: u.rem(16) u.rem(30) u.rem(15) u.rem(32);
         letter-spacing: -0.107143px;
         text-transform: uppercase;
+        color: var(--blue);
+        background-color: var(--white);
         border: none;
-        color: var(--white);
-        background: rgb(255, 255, 255, 0.25);
-        border-radius: 28px;
+        border-radius: u.rem(28);
+
+        &--active {
+          background-color: var(--yellow);
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: var(--white);
+          background: rgb(255, 255, 255, 0.25);
+        }
       }
     }
   }

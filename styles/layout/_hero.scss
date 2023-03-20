@@ -7,6 +7,10 @@
   left: 50%;
   transform: translate(-50%, 0);
 
+  &--none {
+    visibility: hidden;
+  }
+
   @include u.breakpoint(large) {
     top: u.rem(195);
   }

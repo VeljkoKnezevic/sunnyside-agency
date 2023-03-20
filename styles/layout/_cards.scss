@@ -50,6 +50,9 @@
 
   .card {
     text-align: center;
+    @include u.breakpoint(xlarge) {
+      margin-inline: auto;
+    }
 
     &__image {
       width: 100%;
@@ -92,12 +95,26 @@
       border: none;
       position: relative;
 
-      &--transform::after {
-        background-color: rgba(250, 212, 0, 0.25);
+      &:hover {
+        cursor: pointer;
       }
 
-      &--stand::after {
-        background-color: rgba(254, 119, 102, 0.25);
+      &--transform {
+        &::after {
+          background-color: rgba(250, 212, 0, 0.25);
+        }
+        &:hover::after {
+          background-color: #fad400;
+        }
+      }
+
+      &--stand {
+        &::after {
+          background-color: rgba(254, 119, 102, 0.25);
+        }
+        &:hover::after {
+          background-color: #fe7766;
+        }
       }
 
       &::after {

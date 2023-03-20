@@ -31,6 +31,11 @@
     line-height: 25px;
     letter-spacing: -0.128571px;
     color: var(--light-green);
+
+    &:hover {
+      cursor: pointer;
+      color: #ffffff;
+    }
   }
 
   &__socials {
@@ -42,5 +47,10 @@
     @include u.breakpoint(xlarge) {
       max-width: u.rem(300);
     }
+  }
+
+  &__social:hover {
+    cursor: pointer;
+    filter: brightness(0) invert(1);
   }
 }
